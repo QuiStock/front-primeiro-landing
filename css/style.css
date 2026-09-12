@@ -99,8 +99,8 @@ main {
 }
 
 main section {
-    height: calc(100vh - 7vh);
-    height: calc(100dvh - 7vh);
+    min-height: calc(100dvh - 7vh);
+    scroll-margin-top: 7vh;
 }
 
 #hero {
