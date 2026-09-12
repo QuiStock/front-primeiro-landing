@@ -8,7 +8,7 @@
     /* cores variaveis */
     --limao-claro: #D7F6B1;
     --fundo: #FAF5FB;
-    --branco-usavel: #FEFCFF;
+    --branco2: #FEFCFF;
     --titulo-roxo: #8720B0;
 }
 
@@ -36,7 +36,7 @@ header {
     padding: min(.5rem, 1%) min(1rem, 10%);
     height: 7vh;
 
-    background-color: var(--branco-usavel);
+    background-color: var(--branco2);
     box-shadow: 0 0 5px #11061F30;
 
     position: fixed;
@@ -125,7 +125,7 @@ main section {
 
         h1, p {
             width: 50%;
-            color: var(--branco-usavel);
+            color: var(--branco2);
         }
 
         h1 {
@@ -187,7 +187,7 @@ main section {
         }
 
         #box-2, #box-3, #box-4 {
-            background-color: var(--branco-usavel);
+            background-color: var(--branco2);
         }
 
         #box-1 {
@@ -270,3 +270,61 @@ main section {
     }
 }
 
+#quem-somos {
+    padding: 0 min(2rem, 10%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    h1 {
+        font-size: clamp(.75rem, 2vw + .5rem, 5rem);
+        text-align: left;
+        color: var(--lavana);
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        overflow-x: auto;
+        width: 100%;
+        padding: min(.5rem, 2%) 0;
+    }
+
+    .greeting-card, .card {
+        height: 55vh;
+        width: 15em;
+        flex-shrink: 0;
+        background-color: #d9d9d9;
+        border-radius: 15px;
+        padding: min(1.2rem, 5%);
+    }
+
+    .greeting-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        background-color: var(--lavana);
+        color: var(--branco2);
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: .5rem;
+
+        .area {
+            font-size: clamp(.55rem, .2vw + .2rem, 10rem);
+            letter-spacing: .41rem;
+            font-weight: 600;
+        }
+
+        .nome {
+            font-size: clamp(1.5rem, .8vw + .75rem, 10rem);
+            font-weight: 550;
+        }
+    }
+}
