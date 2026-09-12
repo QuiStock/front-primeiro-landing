@@ -108,6 +108,8 @@ main section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: calc(100vh - 7vh);
+    height: calc(100dvh - 7vh);
 
     div {
         height: 90%;
