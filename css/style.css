@@ -104,6 +104,22 @@ main section {
     scroll-margin-top: 7vh;
 }
 
+.cta_button{
+    width: fit-content;
+
+    padding: min(1rem, 5%);
+    padding-left: min(4rem, 5%);
+    padding-right: min(4rem,5%);
+    font-size: clamp(.5rem, 1.5vw + .8rem, 1.3rem);
+
+    border: solid transparent;
+    border-radius: 50px;
+    margin-top: 1%;
+
+    background: linear-gradient(to right, #8720B0, #7F3AEF);
+    color: var(--branco2);
+}
+
 #hero {
     padding: 0 min(2rem, 10%);
     display: flex;
@@ -137,17 +153,7 @@ main section {
             font-size: clamp(1rem, 1vw + .5rem, 2rem);
         }
 
-        button {
-            width: fit-content;
-            align-self: flex-start;
 
-            padding: min(1rem, 5%);
-            font-size: clamp(.5rem, 1vw + .5rem, 1rem);
-
-            border-radius: 50px;
-
-            margin-top: 1%;
-        }
     }
 }
 
@@ -277,6 +283,7 @@ main section {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin-bottom: 3rem;
 
     h1 {
         font-size: clamp(2rem, 2vw + .5rem, 5rem);
@@ -361,6 +368,35 @@ main section {
     }
 }
 
+#contato{
+    display: flex;
+    padding: 0 min(2rem, 10%);
+    #area_contato{
+        display: flex;
+        flex-direction: column;
+        width: 95vw;
+        height: 50vh;
+        border-radius: 30px;
+        background-color: var(--limao-claro);
+        justify-content: center;
+        align-items: center;
+    }
+    h1{
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        color: var(--titulo-roxo);
+    }
+    h3{
+        color: var(--petroleo);
+        width: 45%;
+        font-weight: 200;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    button{
+        margin-top: 2rem;
+    };
+}
 /*
 ::-webkit-scrollbar {
     width: 16px;
