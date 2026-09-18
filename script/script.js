@@ -3,6 +3,9 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.classList.add("show");
         }
+        else{
+            entry.target.classList.remove("show");
+        }
     });
 }, {
     threshold: 0.51,
@@ -37,6 +40,10 @@ observer.observe(benefBox5);
 const equipeTitle = document.querySelector("#quem-somos h1");
 const greetingCard = document.querySelector("#quem-somos .greeting-card");
 const equipeCards = document.querySelectorAll("#quem-somos .card");
+
+const contatoAll = document.querySelector("#contato");
+observer.observe(contatoAll);
+
 
 observer.observe(equipeTitle);
 observer.observe(greetingCard);
