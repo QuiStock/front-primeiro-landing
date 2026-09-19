@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Lexend:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --branco: #E7CEEB;
+    --lavana: #AF36DF;
+    --limao: #89B751;
+    --violeta: #7F3AEF;
+    --petroleo: #11061F;
+
+    --limao-claro: #D7F6B1;
+    --fundo: #FAF5FB;
+    --branco-usavel: #FEFCFF;
+    --titulo-roxo: #8720B0;
+}
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+    background-color: var(--fundo);
+
+    display: flex;
+    align-items: center;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid grey;
+    background: transparent;
+
+    padding-bottom: 0.7rem;
+    padding-left: 0.5rem;
+
+    font-size: 1.3rem;
+}
+input:focus{
+    outline: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: #000000 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+#container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+    height: 100dvh;
+
+    margin: 0 0 0 10%;
+}
+
+#left-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-left: -8rem;
+    width: 53%;
+}
+#left{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: 70%;
+}
+#left button{
+    border: 2px solid transparent;
+    border-radius: 15px;
+    background: linear-gradient(to right, var(--lavana), #7F3AEF);
+
+    height: 4.8rem;
+
+    color: rgb(247, 246, 246);
+    font-size: 1.3rem;
+}
+#left button:hover{
+    cursor: pointer;
+    background: linear-gradient(to right, #7F3AEF, var(--lavana));
+}
+#left h1{
+    color: var(--lavana);
+    font-weight: 600;
+    font-size: 2.7rem;
+}
+
+#low img {
+    width: 1.2em;
+    cursor: pointer;
+}
+#low {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 0.8rem;
+
+    margin-left: 0;
+    margin-top: 2rem;
+}
+#low p{
+    margin-top: -0.3em;
+}
+
+
+
+#right{
+    display: flex;
+    flex-direction: column;
+
+    border: 2px solid var(--lavana);
+    border-radius: 25px;
+
+    text-align: end;
+    color: white;
+
+    background-color: var(--lavana);
+
+    height: 92%;
+    width: 49%;
+
+    margin-left: 3rem;
+}
+#right h1{
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-top: .5em;
+}
+#right img{
+    width: 9.5em;
+}
+#box{
+    margin: 30px 40px 0px 0px;
+}
+#interacao{
+    width: 65%;
+    height: 25%;
+
+    align-self: flex-start;
+
+    margin-left: 2.8em;
+    margin-top: 13em;
+    color: black;
+
+    text-align: center;
+    opacity: 0;
+}
+#botoes{
+    margin-left: -.5em;
+    width: 95%;
+}
+.escolha button{
+    display: flex;
+}
+.escolha {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+#escolha1{
+    border: 2px solid var(--limao-claro);
+    background: var(--limao-claro);
+    border-radius: 8px;
+
+    width: 47%;
+    height: 40px;
+}
+#escolha2{
+    border: 2px solid var(--limao-claro);
+    background: var(--limao-claro);
+    border-radius: 8px;
+
+    width: 47%;
+    height: 40px;
+}
+#escolha1:hover{
+    cursor: pointer;
+}
+#escolha2:hover{
+    cursor: pointer;
+}
+#box2{
+    border: 2px solid rgb(245, 245, 245);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+
+    background-color: rgb(245, 245, 245);
+
+    padding-top: 0.8em;
+    font-size: 1.2em;
+
+    width: 20em;
+    height: 3.2em;
+}
+.fefox{
+    position: fixed;
+    width: 17rem;
+
+    right: 0;
+    top: 23.78rem;
+    animation: fefoEntrando 0.5s ease forwards;
+}
+
+
+
+/* animaçõexs */
+@keyframes fefoEntrando{
+    from{
+         right: -20rem; 
+    }
+    to{
+        right: 0; 
+    }
+}
+
+@keyframes fadein{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.fadein {
+    animation: fadein 1s ease forwards;
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+.fadeout {
+    animation: fadeout 0.5s ease forwards;
+}
+
+
+@media screen and (max-width: 1000px){
+
+    body {
+        min-height: 100vh;
+        min-height: 100dvh;
+        height: auto;
+        padding: 3rem 0;
+    }
+
+    #container{
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+        margin: 0 auto;
+        gap: 3rem;
+    }
+
+    #left-wrapper{
+        margin-left: 0;
+        width: 100%;
+    }
+    #left{
+        width: 90%;
+        margin: 0 auto;
+        gap: 2.5rem;
+    }
+    #left h1{
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    #right{
+        width: 100%;
+        margin-left: 0;
+        height: auto;
+        padding-bottom: 2.5rem;
+    }
+    #right h1{
+        font-size: 1.9em;
+    }
+
+    #interacao{
+        margin-top: 3em;
+        width: 85%;
+    }
+    #botoes{
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .fefox{
+        position: static;
+        display: block;
+        margin: -2rem auto 0;
+        width: 12rem;
+        animation: none;
+    }
+}
+
+
+
+@media screen and (max-width: 480px){
+
+    #left h1{
+        font-size: 1.8rem;
+    }
+    input{
+        font-size: 1rem;
+    }
+    #left button{
+        height: 3.8rem;
+        font-size: 1.1rem;
+    }
+
+
+
+    #right h1{
+        font-size: 1.5em;
+    }
+    #right p{
+        font-size: 0.85em;
+    }
+
+    #box2{
+        width: 63%;
+        font-size: 1em;
+    }
+    #botoes{
+        display: flex;
+        gap: 0.6rem;
+    }
+    #escolha1, #escolha2{
+        width: 30%;
+    }
+
+    .fefox{
+        width: 10rem;
+        margin-right: -1.5rem;
+        margin-top: -15rem;
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Login | Admin</title>
+</head>
+<body>
+    <div id="container">
+
+        <div id="left-wrapper">
+            <form action="login-admin" method="POST" id="left">
+                <h1>Login</h1>
+                <input type="email" id="emailAdmin" placeholder="Email" name="emailAdmin" required>
+                <input type="password" id="senhaAdmin" placeholder="Senha" name="senhaAdmin" required>
+                <button type="submit">Entrar</button>
+            </form>    
+
+                <div id="low">
+                    <p id="pequeno">Nos acompanhe</p>
+                    <a href="https://instagram.com" target="_blank" rel="noopener">
+                        <img src="assets/insta-logo.png" alt="Instagram">
+                    </a>
+                    <a href="mailto:quistockinterdisciplinar@gmail.com" target="_blank">
+                        <img src="assets/email-logo.png" alt="Email">
+                    </a>
+                </div>
+        </div>
+
+        <div id="right">
+            <div id="box">
+                <img src="assets/logo-branca.png" alt="">
+                <h1>Bem-vindo de volta!</h1>
+                <p>Acesse o QuiStock para monitorar seus produtos em tempo <br>real. Digite suas credenciais ao lado e continue evoluindo sua <br>operação hoje mesmo.</p>
+            </div>
+
+            <div id="interacao">
+                <div id="box2"><p id="fala">Já tem cadastro?</p></div>
+                <div id="botoes">
+                   <button type="button" class="escolha" id="escolha1">Não tenho</button>
+                    <button type="button" class="escolha" id="escolha2">Tenho, obrigado(a)</button> 
+                </div>
+                
+            </div>
+            
+        </div>
+        <img src="assets/fefo-alegre.png" alt="" class="fefox">
+    </div>
+
+    <script src="script/login.js" defer></script>
+</body>
+</html>
