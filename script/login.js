@@ -12,7 +12,7 @@ setTimeout(function(){
 
 opcao1.addEventListener("click", function(){
 
-    if(fala.textContent == "Já tem cadástro?"){
+    if(fala.textContent == "Já tem cadastro?"){
 
         fala.textContent = "Gostaria de fazer um?";
         opcao1.textContent = "Sim";
@@ -38,7 +38,7 @@ opcao1.addEventListener("click", function(){
 
 opcao2.addEventListener("click", function(){
 
-    if(fala.textContent == "Já tem cadástro?"){
+    if(fala.textContent == "Já tem cadastro?"){
 
         interacao.classList.add("fadeout");
 
