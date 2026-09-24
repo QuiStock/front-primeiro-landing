@@ -150,9 +150,9 @@ input:-webkit-autofill:active {
     margin: 30px 40px 0px 0px;
 }
 #interacao{
+
     width: 65%;
     height: 25%;
-
     align-self: flex-start;
 
     margin-left: 2.8em;
