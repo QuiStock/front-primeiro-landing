@@ -1,0 +1,81 @@
+:root {
+    --branco: #E7CEEB;
+    --lavana: #AF36DF;
+    --limao: #89B751;
+    --violeta: #7F3AEF;
+    --petroleo: #11061F;
+
+    /* cores variaveis */
+    --limao-claro: #D7F6B1;
+    --fundo: #FAF5FB;
+    --branco2: #FEFCFF;
+    --titulo-roxo: #8720B0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    padding: min(2rem, 20%);
+
+    display: flex;
+    flex-direction: row;
+
+    aside {
+        background-color: var(--titulo-roxo);
+        height: 90vh;
+        width: 30%;
+        border-radius: 25px;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: min(1rem, 10%) min(3rem, 30%);
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            padding: min(1rem, 5%);
+            color: var(--branco2);
+            font-size: clamp(1rem, 1w + .5rem, 1.5rem);
+        }
+
+        .li-elemento {
+            
+        }
+
+        .li-elemento:nth-child(1) {
+            list-style-image: url('../assets/inicio.png');
+        }
+
+        .li-elemento:nth-child(2) {
+            list-style-image: url('../assets/administradores.png');
+        }
+
+        .li-elemento:nth-child(3) {
+            list-style-image: url('../assets/gerente.png');
+        }
+
+        .li-elemento:nth-child(4) {
+            list-style-image: url('../assets/loja.png');
+        }
+
+        .li-elemento:nth-child(5) {
+            list-style-image: url('../assets/regiao.png');
+        }
+
+        .li-elemento:nth-child(6) {
+            list-style-image: url('../assets/pedido.png');
+        }
+    }
+}
+
