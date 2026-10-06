@@ -818,8 +818,16 @@ footer{
         padding: 0.5rem 1.5rem;
     }
 
+    header img {
+        width: 12vw;
+    }
+
     header nav {
-        gap: clamp(1rem, 2.5vw, 2.5rem);
+        gap: clamp(1rem, 3vw, 2.5rem);
+    }
+
+    header nav a {
+        font-size: clamp(.2rem, 1vw + .75rem, 1.2rem);
     }
 
     #hero div {
