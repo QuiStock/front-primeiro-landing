@@ -336,9 +336,11 @@ header .cta_button1:hover::before {
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
-                justify-content: center;
                 align-items: center;
 
+                h3 {
+                    text-align:start;
+                }
             }
 
             img{
@@ -347,7 +349,6 @@ header .cta_button1:hover::before {
                 width: 80%;
             }
         }
-
 
         #box-4 {
             grid-area: box-4;
@@ -792,11 +793,15 @@ footer{
 */
 
 /* responsividade */
-@media (max-width: 1200px) {
+@media (max-width: 7680px) {
     #beneficios div {
         grid-template-columns: 1fr 1fr 1fr 1fr 1.2fr;
         grid-template-rows: minmax(13rem, auto) minmax(13rem, auto);
         gap: 1.25rem 1rem;
+    }
+
+    #contato {
+        padding: 0 min(2rem, 10%);
     }
 }
 
