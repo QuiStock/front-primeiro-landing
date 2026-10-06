@@ -1,6 +1,6 @@
 :root {
     --branco: #E7CEEB;
-    --lavana: #AF36DF;
+    --lavana: #7F3AEF;
     --limao: #89B751;
     --violeta: #7F3AEF;
     --petroleo: #11061F;
@@ -31,6 +31,7 @@ html {
 body {
     width: 100%;
     background-color: var(--fundo);
+    overflow-x: hidden;
 }
 
 header {
@@ -102,7 +103,6 @@ main section {
     scroll-margin-top: 7vh;
 }
 
-/* Botão CTA Principal */
 .cta_button {
     position: relative;
     overflow: hidden;
@@ -136,7 +136,6 @@ main section {
     opacity: 1;
 }
 
-/* Botão CTA Header (cta_button1) */
 header .cta_button1 {
     position: relative;
     overflow: hidden;
@@ -169,7 +168,6 @@ header .cta_button1:hover::before {
     opacity: 1;
 }
 
-
 #hero {
     padding: 0 min(2rem, 10%);
     display: flex;
@@ -187,6 +185,9 @@ header .cta_button1:hover::before {
         justify-content: center;
         align-items: flex-start;
         gap: 2%;
+
+        background-repeat: no-repeat;
+        background-size: cover;
 
         padding: 0 min(2rem, 10%);
 
@@ -214,6 +215,7 @@ header .cta_button1:hover::before {
             opacity: 0;
             translate: 0 70px;
             transition: 700ms;
+            transition-delay: 400ms;
         }
 
     }
@@ -246,6 +248,7 @@ header .cta_button1:hover::before {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
     margin-bottom: 10vh;
 
     h1 {
@@ -253,6 +256,8 @@ header .cta_button1:hover::before {
         text-align: center;
         color: var(--titulo-roxo);
         margin-bottom: 1.5rem;
+        width: 65%;
+        text-align: center;
     }
 
     div {
@@ -335,9 +340,11 @@ header .cta_button1:hover::before {
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
-                justify-content: center;
                 align-items: center;
 
+                h3 {
+                    text-align:start;
+                }
             }
 
             img{
@@ -346,7 +353,6 @@ header .cta_button1:hover::before {
                 width: 80%;
             }
         }
-
 
         #box-4 {
             grid-area: box-4;
@@ -375,7 +381,7 @@ header .cta_button1:hover::before {
             transition-delay: 400ms;
 
             h3 {
-                width: 50%;
+                width: 60%;
             }
 
             img {
@@ -422,18 +428,19 @@ header .cta_button1:hover::before {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 5vh;
+    scroll-margin-top: 10vh;
+
     h1{
         font-size: clamp(.75rem, 2vw + .5rem, 5rem);
         text-align: center;
         color: var(--titulo-roxo);
-        margin-bottom: 1rem;
+        margin-bottom: .5rem;
     }
 
     h3{
-        margin-bottom: 10vh;
         font-weight: 300;
         font-size: 1.5rem;
+        margin-bottom: 5vh;
     }
 }
 
@@ -441,7 +448,6 @@ header .cta_button1:hover::before {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    padding-bottom: 10vh;
     width: 100%;
     align-items: center;
 }
@@ -451,23 +457,26 @@ header .cta_button1:hover::before {
     top: 100px;
     width: 80%;
     height: 60vh;
-    background-color: #11061F;
     color: white;
     border-radius: 30px;
+    background-color: var(--lavana);
 
-    h3{
-        padding-top: 45vh;
-        padding-left: 5%;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    will-change: transform;
+
+    opacity: 0;
+    translate: 0 70px;
+    transition: opacity 300ms, translate 300ms;
+
     span{
         font-size: clamp(1rem, .8vw + 2.5rem, 2.5rem );
         font-weight: 600;
         color: var(--branco2);
     }
-    
-    opacity: 0;
-    translate: 0 70px;
-    transition: opacity 300ms, translate 300ms;
+
 }
 
 .cards_plataforma.show {
@@ -475,28 +484,44 @@ header .cta_button1:hover::before {
     translate: 0 0;
 }
 
-#c2{
-    top: 140px;
-    background-color: #89B751;
+.cards_plataforma:nth-child(1) {
+    top: 100px;
+    /* background-image: url("../assets/dashboard.jpg"); */
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-#c3{
-    top: 190px;
-    background-color: #8720B0;
+.cards_plataforma:nth-child(2) {
+    top: 150px;
+    /* background-image: url("../assets/deposito.jpg"); */
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-#c4{
-    top: 240px;
-    background-color: #7F3AEF;
+.cards_plataforma:nth-child(3) {
+    top: 200px;
+    /* background-image: url("../assets/email-not.jpg");*/ 
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-#c5{
-    top: 260px;
-    background-color: #d9d9d9;
-    color: #11061F;
-    span{
-        color: #11061F;
-    }
+.cards_plataforma:nth-child(4) {
+    top: 250px;
+    /* background-image: url("../assets/pessoa-no-celular.jpg"); */
+    background-position: 50% 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cards_plataforma:nth-child(5) {
+    top: 300px;
+    /* background-image: url("../assets/caixa-registradora.jpg"); */
+    background-position: 50% 45%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #quem-somos {
@@ -505,7 +530,6 @@ header .cta_button1:hover::before {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-bottom: 10vh;
 
 
     h1 {
@@ -519,8 +543,9 @@ header .cta_button1:hover::before {
     }
 
     p{
-         font-size: clamp(.5rem, .5vw + 1rem, 1.1rem);
+        font-size: clamp(.5rem, .5vw + 1rem, 1.1rem);
     }
+
     .container {
         display: flex;
         flex-direction: row;
@@ -643,16 +668,17 @@ header .cta_button1:hover::before {
     opacity: 1;
     translate: 0 0;
 }
-#contato{
 
-    margin-bottom: 10vh;
+#contato{
+    margin-bottom: 5vh;
     display: flex;
     min-height: auto;
-    padding: 0 min(2rem, 10%);
     padding-bottom: 8vh;
     opacity: 0;
     translate: 0 70px;
     transition: 700ms;
+    justify-self: center;
+
     #area_contato{
         display: flex;
         flex-direction: column;
@@ -677,7 +703,7 @@ header .cta_button1:hover::before {
     }
     button{
         margin-top: 3rem;
-    };
+    }
 }
 
 footer{
@@ -769,3 +795,527 @@ footer{
     background-clip: padding-box; 
 }
 */
+
+/* responsividade */
+@media (max-width: 7680px) {
+    #hero div {
+        background-position: 50% 60%;
+    }
+
+    #beneficios div {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1.2fr;
+        grid-template-rows: minmax(13rem, auto) minmax(13rem, auto);
+        gap: 1.25rem 1rem;
+    }
+
+    #contato {
+        padding: 0 min(2rem, 10%);
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        padding: 0.5rem 1.5rem;
+    }
+
+    header img {
+        width: 12vw;
+    }
+
+    header nav {
+        gap: clamp(1rem, 3vw, 2.5rem);
+    }
+
+    header nav a {
+        font-size: clamp(.2rem, 1vw + .75rem, 1.2rem);
+    }
+
+    #hero div {
+        background-size: cover;
+        background-position: center;
+        padding: 4rem 3rem;
+        justify-content: flex-end;
+        height: 80vh;
+    }
+
+    #hero h1 {
+        font-size: clamp(1.6rem, 6vw, 10rem) !important;
+    }
+
+    #hero p {
+        font-size: clamp(1.6rem, 1vw + .5rem, 2.4rem) !important;
+    }
+
+    #hero div h1,
+    #hero div p {
+        width: 75%;
+    }
+
+    #hero button {
+        font-size: clamp(1.6rem, 2vw + .5rem, 2.4rem);
+    }
+
+    #beneficios h1 {
+        width: 80%;
+        align-self: center;
+        font-size: clamp(2rem, 2vw + 1rem, 5rem);
+    }
+
+    #beneficios div {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "box-1 box-2"
+            "box-4 box-5"
+            "box-3 box-3";
+        gap: 1.25rem;
+    }
+
+    .box {
+        padding: .2rem 0;
+    }
+
+    #beneficios div #box-2 img {
+        width: 35%;
+        max-width: 180px;
+    }
+
+    #beneficios div #box-1 img {
+        width: 35%;
+        max-width: 120px;
+    }
+
+    #beneficios div #box-3 {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem 2rem;
+    }
+
+    #beneficios div #box-3 div {
+        align-items: flex-start;
+        text-align: left;
+        width: 60%;
+    }
+
+    #beneficios div #box-3 img {
+        width: 30%;
+        max-width: 160px;
+    }
+
+    #plataforma {
+        gap: 5vh;
+    }
+
+    #plataforma h1 {
+        font-size: clamp(1rem, 3vw + 1rem, 5rem);
+    }
+
+    #plataforma h3 {
+        margin-bottom: .5rem !important;
+        text-align: center;
+    }
+
+    .greeting-card, .card {
+        width: 30em !important;
+    }
+
+    .greeting-card {
+        justify-content: flex-end !important;
+    }
+
+    .greeting-card p, .greeting-card img {
+        margin: 1.5rem 1.5rem;
+    }
+
+    .greeting-card p {
+        font-size: clamp(1rem, 1vw + 1rem, 5rem) !important;
+    }
+
+    .greeting-card img {
+        width: clamp(1.5rem, 4vw, 3rem) !important;
+    }
+
+    #contato #area_contato {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #contato h3 {
+        width: 75%;
+    }
+
+    footer #links {
+        padding-left: 0;
+        gap: 40px;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #plataforma .cards_plataforma {
+        width: 85%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        min-height: 7vh;
+        padding: 0.6rem 1rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    header img {
+        width: clamp(70px, 18vw, 110px);
+    }
+
+    header nav {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 0.5rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 0.3rem 0;
+    }
+
+    header nav a {
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+
+    header .cta_button1 {
+        width: auto;
+        padding: 0.4rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    main {
+        padding-top: 85px;
+    }
+
+    main section {
+        scroll-margin-top: 85px;
+    }
+
+    #hero {
+        height: calc(100vh - 85px);
+        height: calc(100dvh - 85px);
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    #hero div {
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        padding: 2rem clamp(1.25rem, 4vw, 2rem);
+        gap: 1.2rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        box-sizing: border-box;
+    }
+
+    #hero div h1,
+    #hero div p {
+        width: 100%;
+    }
+
+    #hero div h1 {
+        font-size: clamp(1.6rem, 5.5vw, 2.4rem);
+    }
+
+    #hero div p {
+        font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+        line-height: 1.5;
+    }
+
+    #hero div button {
+        font-size: 0.95rem;
+        padding: 0.75rem 1.8rem;
+    }
+
+    #beneficios {
+        padding: 0 1rem;
+        margin-bottom: 6vh;
+    }
+
+    #beneficios h1 {
+        font-size: clamp(1.2rem, 4.5vw, 1.8rem);
+        margin-bottom: 1.5rem;
+    }
+
+    #beneficios div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #beneficios div .box {
+        padding: 1.5rem !important;
+    }
+
+    #beneficios div #box-1 {
+        min-height: 120px;
+    }
+
+    #beneficios div #box-1 img {
+        max-width: 140px;
+    }
+
+    #beneficios div #box-2 {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    #beneficios div #box-2 img {
+        width: 180px;
+        max-width: 65%;
+    }
+
+    #beneficios div #box-3 {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    #beneficios div #box-3 div {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    #beneficios div #box-3 img {
+        width: 180px;
+        max-width: 65%;
+    }
+
+    #beneficios div #box-4 {
+        text-align: center;
+    }
+
+    #beneficios div #box-5 {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #beneficios div #box-5 h3 {
+        width: 70%;
+        font-size: 1.1rem;
+    }
+
+    #beneficios div #box-5 img {
+        width: 25%;
+        max-width: 75px;
+    }
+
+    #plataforma {
+        padding: 0 1rem;
+    }
+
+    #plataforma h1 {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+    }
+
+    #plataforma h3 {
+        font-size: 1.1rem;
+        margin-bottom: 6vh;
+        text-align: center;
+    }
+
+    .cards_plataforma {
+        width: 88%;
+        border-radius: 20px;
+    }
+
+    .cards_plataforma h3 {
+        padding-top: 36vh;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: clamp(0.95rem, 3.5vw, 1.25rem);
+    }
+
+    .cards_plataforma span {
+        font-size: 1.6rem;
+    }
+
+    #quem-somos {
+        padding: 0 1rem;
+        margin-bottom: 6vh;
+    }
+
+    #quem-somos h1 {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+    }
+
+    #quem-somos .container {
+        padding: 0.5rem 0 1.5rem;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #quem-somos .greeting-card,
+    #quem-somos .card {
+        height: 380px;
+        width: 14em;
+    }
+
+    #quem-somos .greeting-card p {
+        font-size: 0.88rem;
+    }
+
+    #quem-somos .card img:not([src]),
+    #quem-somos .card img[src=""] {
+        display: none;
+    }
+
+    #contato {
+        padding: 0 1rem 6vh;
+    }
+
+    #contato #area_contato {
+        width: 100%;
+        height: auto;
+        min-height: 320px;
+        padding: 2.5rem 1.25rem;
+        box-sizing: border-box;
+    }
+
+    #contato h1 {
+        font-size: clamp(1.8rem, 5vw, 2.4rem);
+    }
+
+    #contato h3 {
+        width: 95%;
+        font-size: 1.05rem;
+    }
+
+    #contato button {
+        margin-top: 2rem;
+    }
+
+    footer #footer_sec {
+        padding: 0 1rem 20px;
+    }
+
+    footer #footer_sec img {
+        max-width: 120px;
+    }
+
+    footer #links {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding-left: 0;
+    }
+
+    footer a {
+        word-break: break-word;
+        overflow-wrap: anywhere;
+    }
+
+    #quistock_footer {
+        padding: 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header button {
+        font-size: .6rem !important;
+    }
+
+    header nav a {
+        font-size: .7rem;
+    }
+
+    #hero {
+        padding: 0.75rem 0.75rem 2.5rem;
+    }
+
+    #hero div {
+        height: 85vh;
+        min-height: 400px;
+        padding: 1.8rem 1.5rem;
+
+        background-position: 60% 50%;
+
+        justify-content: flex-end;
+    }
+
+    #hero div p {
+        font-size: clamp(.5rem, 1vw + .75rem, 2rem) !important;
+    }
+
+    #hero div h1 {
+        font-size: clamp(1rem, 3vw + 1rem, 3rem) !important;
+    }
+
+    #beneficios h1 {
+        font-size: clamp(1rem, 1vw + 1rem, 2rem);
+    }
+
+    #beneficios div #box-5 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #beneficios div #box-5 img {
+        width: 65px;
+    }
+
+    #beneficios div #box-5 h3 {
+        width: 100%;
+    }
+
+    #plataforma h3 {
+        margin-bottom: .5rem;
+    }
+
+    .cards_plataforma {
+        width: 90%;
+    }
+
+    .cards_plataforma h3 {
+        padding-top: 34vh;
+        font-size: 0.95rem;
+    }
+
+    .cards_plataforma span {
+        font-size: 1.35rem;
+    }
+
+    #quem-somos .container {
+        height: 80vh !important;
+    }
+
+    .greeting-card, .card {
+        height: 95% !important;
+        width: 20em !important;
+    }
+
+    #contato button {
+        font-size: 1rem;
+    }
+
+    footer {
+        height: calc(100dvh - 90px);
+    }
+}
