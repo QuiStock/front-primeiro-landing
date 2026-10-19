@@ -531,7 +531,6 @@ header .cta_button1:hover::before {
     flex-direction: column;
     justify-content: space-evenly;
 
-
     h1 {
         font-size: clamp(2rem, 2vw + .5rem, 5rem);
         text-align: left;
@@ -661,13 +660,15 @@ header .cta_button1:hover::before {
         background-image: url('../assets/bruno.jpeg');
         background-position: center;
         background-size: cover;
+        background-repeat: no-repeat;
         transition-delay: 100ms;
     }
 
     .card:nth-child(3) {
         background-image: url('../assets/enri.jpeg');
-        background-position: center;
-        background-size: cover;
+        background-position: 20% 50%;
+        background-size: 200%;
+        background-repeat: no-repeat;
         transition-delay: 200ms;
     }
 
@@ -675,6 +676,7 @@ header .cta_button1:hover::before {
         background-image: url('../assets/nath.jpeg');
         background-position: center;
         background-size: cover;
+        background-repeat: no-repeat;
         transition-delay: 300ms;
     }
 
@@ -682,6 +684,7 @@ header .cta_button1:hover::before {
         background-image: url('../assets/morais.jpeg');
         background-position: center;
         background-size: cover;
+        background-repeat: no-repeat;
         transition-delay: 400ms;
     }
 
@@ -689,30 +692,49 @@ header .cta_button1:hover::before {
         background-image: url('../assets/hik.jpeg');
         background-position: center;
         background-size: cover;
+        background-repeat: no-repeat;
     }
 
     .card:nth-child(7) {
         background-image: url('../assets/bia.jpeg');
         background-position: center;
         background-size: cover;
+        background-repeat: no-repeat;
     }
 
     .card:nth-child(8) {
         background-image: url('../assets/chris.jpeg');
         background-position: center;
         background-size: cover;
+        background-repeat: no-repeat;
     }
 
     .card:nth-child(9) {
         background-image: url('../assets/bella.jpeg');
         background-position: center;
         background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .card:nth-child(10) {
+        background-image: url('../assets/kluska.jpeg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     .card:nth-child(11) {
         background-image: url('../assets/luigi.jpeg');
         background-position: center;
         background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .card:nth-child(12) {
+        background-image: url('../assets/rodrigo.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }
 
