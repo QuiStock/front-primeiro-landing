@@ -2,14 +2,14 @@
     --branco: #E7CEEB;
     --lavana: #7F3AEF;
     --limao: #89B751;
-    --violeta: #7F3AEF;
+    --violeta: #AF36DF;
     --petroleo: #11061F;
 
     /* cores variaveis */
     --limao-claro: #D7F6B1;
+    --verde-escuro: #659529;
     --fundo: #FAF5FB;
     --branco2: #FEFCFF;
-    --titulo-roxo: #8720B0;
 }
 
 * {
@@ -112,7 +112,7 @@ main section {
     padding: min(1rem, 5%) min(4rem, 5%);
     font-size: clamp(.5rem, 1.5vw + .8rem, 1.3rem);
     color: var(--branco2);
-    background: linear-gradient(to right, #8720B0, #7F3AEF);
+    background: linear-gradient(to right, var(--violeta), var(--lavana));
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -126,7 +126,7 @@ main section {
     z-index: -1;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to left, var(--lavana), var(--violeta));
+    background: linear-gradient(to right, var(--lavana), var(--violeta));
     border-radius: inherit;
     opacity: 0;
     transition: opacity 500ms ease-in-out;
@@ -144,7 +144,7 @@ header .cta_button1 {
     padding: min(.5rem, 10%);
     font-size: clamp(.2rem, .3vw + .5rem, 1rem);
     color: var(--branco2);
-    background: linear-gradient(to right, #8720B0, #7F3AEF);
+    background: linear-gradient(to right, var(--violeta), var(--lavana));
     border: none;
     border-radius: 25px;
     cursor: pointer;
@@ -158,7 +158,7 @@ header .cta_button1::before {
     z-index: -1;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to left, var(--lavana), var(--violeta));
+    background: linear-gradient(to right, var(--lavana), var(--violeta));
     border-radius: inherit;
     opacity: 0;
     transition: opacity 500ms ease-in-out;
@@ -254,7 +254,7 @@ header .cta_button1:hover::before {
     h1 {
         font-size: clamp(.75rem, 2vw + .5rem, 5rem);
         text-align: center;
-        color: var(--titulo-roxo);
+        color: var(--violeta);
         margin-bottom: 1.5rem;
         width: 65%;
         text-align: center;
@@ -382,6 +382,7 @@ header .cta_button1:hover::before {
 
             h3 {
                 width: 60%;
+                color: var(--verde-escuro);
             }
 
             img {
@@ -433,7 +434,7 @@ header .cta_button1:hover::before {
     h1{
         font-size: clamp(.75rem, 2vw + .5rem, 5rem);
         text-align: center;
-        color: var(--titulo-roxo);
+        color: var(--violeta);
         margin-bottom: .5rem;
     }
 
@@ -534,7 +535,7 @@ header .cta_button1:hover::before {
     h1 {
         font-size: clamp(2rem, 2vw + .5rem, 5rem);
         text-align: left;
-        color: var(--lavana);
+        color: var(--violeta);
 
         opacity: 0;
         translate: 0 70px;
@@ -781,7 +782,7 @@ header .cta_button1:hover::before {
     h1{
         font-size: 3rem;
         margin-bottom: 1rem;
-        color: var(--titulo-roxo);
+        color: var(--verde-escuro);
     }
     h3{
         color: var(--petroleo);
