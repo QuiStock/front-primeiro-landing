@@ -336,21 +336,26 @@ header .cta_button1:hover::before {
 
             transition-delay: 600ms;
 
-            div {
+            div:nth-child(1) {
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
-                align-items: center;
 
                 h3 {
-                    text-align:start;
+                    text-align: start;
                 }
             }
 
-            img{
+            div:nth-child(2) {
                 display: flex;
+                flex-direction: column;
+                gap: .3rem;
                 align-content: center;
                 width: 80%;
+            }
+
+            div:nth-child(2) img {
+                width: 125%;
             }
         }
 
@@ -386,7 +391,7 @@ header .cta_button1:hover::before {
             }
 
             img {
-                width: 18%;
+                width: 28%;
             }
         }
     }
@@ -658,7 +663,7 @@ header .cta_button1:hover::before {
     }
 
     .card:nth-child(2) {
-        background-image: url('../assets/bruno.jpeg');
+        background-image: url('../assets/equipe-assets/bruno.jpeg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -666,7 +671,7 @@ header .cta_button1:hover::before {
     }
 
     .card:nth-child(3) {
-        background-image: url('../assets/enri.jpeg');
+        background-image: url('../assets/equipe-assets/henry.jpeg');
         background-position: 20% 50%;
         background-size: 200%;
         background-repeat: no-repeat;
@@ -674,7 +679,7 @@ header .cta_button1:hover::before {
     }
 
     .card:nth-child(4) {
-        background-image: url('../assets/nath.jpeg');
+        background-image: url('../assets/equipe-assets/nathalia.jpeg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -682,7 +687,7 @@ header .cta_button1:hover::before {
     }
 
     .card:nth-child(5) {
-        background-image: url('../assets/morais.jpeg');
+        background-image: url('../assets/equipe-assets/morais.jpeg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -690,49 +695,49 @@ header .cta_button1:hover::before {
     }
 
     .card:nth-child(6) {
-        background-image: url('../assets/hik.jpeg');
+        background-image: url('../assets/equipe-assets/hikaru.jpeg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .card:nth-child(7) {
-        background-image: url('../assets/bia.jpeg');
+        background-image: url('../assets/equipe-assets/beatriz.jpeg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .card:nth-child(8) {
-        background-image: url('../assets/chris.jpeg');
+        background-image: url('../assets/equipe-assets/enzo-chris.jpeg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .card:nth-child(9) {
-        background-image: url('../assets/bella.jpeg');
+        background-image: url('../assets/equipe-assets/isabella.jpeg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .card:nth-child(10) {
-        background-image: url('../assets/kluska.jpeg');
+        background-image: url('../assets/equipe-assets/kluska.jpeg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .card:nth-child(11) {
-        background-image: url('../assets/luigi.jpeg');
+        background-image: url('../assets/equipe-assets/luigi.jpeg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .card:nth-child(12) {
-        background-image: url('../assets/rodrigo.png');
+        background-image: url('../assets/equipe-assets/rodrigo.png');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
