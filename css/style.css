@@ -1,8 +1,8 @@
 :root {
     --branco: #E7CEEB;
-    --lavana: #7F3AEF;
+    --violeta: #7F3AEF;
     --limao: #89B751;
-    --violeta: #AF36DF;
+    --lavana: #AF36DF;
     --petroleo: #11061F;
 
     /* cores variaveis */
@@ -21,7 +21,7 @@
 }
 
 span{
-    color: var(--lavana);
+    color: var(--violeta);
 }
 
 html {
@@ -79,13 +79,13 @@ header {
             bottom: -2px;
             border-radius: 10px;
 
-            background: var(--lavana);
+            background: var(--violeta);
 
             transition: 300ms;
         }
 
         a:hover {
-            color: var(--lavana);
+            color: var(--violeta);
         }
 
         a:hover::after {
@@ -126,7 +126,7 @@ main section {
     z-index: -1;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, var(--lavana), var(--violeta));
+    background: linear-gradient(to left, var(--violeta), var(--lavana));
     border-radius: inherit;
     opacity: 0;
     transition: opacity 500ms ease-in-out;
@@ -158,7 +158,7 @@ header .cta_button1::before {
     z-index: -1;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, var(--lavana), var(--violeta));
+    background: linear-gradient(to left, var(--violeta), var(--lavana));
     border-radius: inherit;
     opacity: 0;
     transition: opacity 500ms ease-in-out;
@@ -254,7 +254,7 @@ header .cta_button1:hover::before {
     h1 {
         font-size: clamp(.75rem, 2vw + .5rem, 5rem);
         text-align: center;
-        color: var(--violeta);
+        color: var(--lavana);
         margin-bottom: 1.5rem;
         width: 65%;
         text-align: center;
@@ -277,7 +277,7 @@ header .cta_button1:hover::before {
             transition: 700ms;
 
             h3 {
-                color: var(--lavana);
+                color: var(--violeta);
                 font-size: clamp(1rem, 1vw + .8rem, 3rem);
             }
 
@@ -291,7 +291,7 @@ header .cta_button1:hover::before {
         }
 
         #box-1 {
-            background-color: var(--lavana);
+            background-color: var(--violeta);
             grid-area: box-1;
 
             display: flex;
@@ -439,7 +439,7 @@ header .cta_button1:hover::before {
     h1{
         font-size: clamp(.75rem, 2vw + .5rem, 5rem);
         text-align: center;
-        color: var(--violeta);
+        color: var(--lavana);
         margin-bottom: .5rem;
     }
 
@@ -465,7 +465,7 @@ header .cta_button1:hover::before {
     height: 60vh;
     color: white;
     border-radius: 30px;
-    background-color: var(--lavana);
+    background-color: var(--violeta);
 
     display: flex;
     flex-direction: column;
@@ -540,7 +540,7 @@ header .cta_button1:hover::before {
     h1 {
         font-size: clamp(2rem, 2vw + .5rem, 5rem);
         text-align: left;
-        color: var(--violeta);
+        color: var(--lavana);
 
         opacity: 0;
         translate: 0 70px;
@@ -594,7 +594,7 @@ header .cta_button1:hover::before {
 
         font-size: clamp(1rem, .8vw + .5rem, 3rem);
 
-        background-color: var(--lavana);
+        background-color: var(--violeta);
         color: var(--branco2);
 
         opacity: 0;
@@ -826,7 +826,7 @@ footer{
     }
 
     label{
-        color: var(--lavana);
+        color: var(--violeta);
         font-size: clamp(1rem, 1vw + .5rem, 1.8rem);;
         font-weight: 500;
     }
