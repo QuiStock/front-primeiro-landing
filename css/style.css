@@ -1,15 +1,15 @@
 :root {
     --branco: #E7CEEB;
-    --lavana: #7F3AEF;
-    --limao: #89B751;
     --violeta: #7F3AEF;
+    --limao: #89B751;
+    --lavana: #AF36DF;
     --petroleo: #11061F;
 
     /* cores variaveis */
     --limao-claro: #D7F6B1;
+    --verde-escuro: #659529;
     --fundo: #FAF5FB;
     --branco2: #FEFCFF;
-    --titulo-roxo: #8720B0;
 }
 
 * {
@@ -21,7 +21,7 @@
 }
 
 span{
-    color: var(--lavana);
+    color: var(--violeta);
 }
 
 html {
@@ -79,13 +79,13 @@ header {
             bottom: -2px;
             border-radius: 10px;
 
-            background: var(--lavana);
+            background: var(--violeta);
 
             transition: 300ms;
         }
 
         a:hover {
-            color: var(--lavana);
+            color: var(--violeta);
         }
 
         a:hover::after {
@@ -103,40 +103,7 @@ main section {
     scroll-margin-top: 7vh;
 }
 
-.cta_button {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    width: fit-content;
-    margin-top: 1%;
-    padding: min(1rem, 5%) min(4rem, 5%);
-    font-size: clamp(.5rem, 1.5vw + .8rem, 1.3rem);
-    color: var(--branco2);
-    background: linear-gradient(to right, #8720B0, #7F3AEF);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-}
-
-.cta_button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to left, var(--lavana), var(--violeta));
-    border-radius: inherit;
-    opacity: 0;
-    transition: opacity 500ms ease-in-out;
-}
-
-.cta_button:hover::before {
-    opacity: 1;
-}
-
-header .cta_button1 {
+header button {
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -144,13 +111,14 @@ header .cta_button1 {
     padding: min(.5rem, 10%);
     font-size: clamp(.2rem, .3vw + .5rem, 1rem);
     color: var(--branco2);
-    background: linear-gradient(to right, #8720B0, #7F3AEF);
+    background: linear-gradient(to right, var(--violeta), var(--lavana));
     border: none;
     border-radius: 25px;
     cursor: pointer;
+    transition: 300ms ease-in-out;
 }
 
-header .cta_button1::before {
+header button::before {
     content: "";
     position: absolute;
     top: 0;
@@ -158,7 +126,7 @@ header .cta_button1::before {
     z-index: -1;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to left, var(--lavana), var(--violeta));
+    background: linear-gradient(to left, var(--violeta), var(--lavana));
     border-radius: inherit;
     opacity: 0;
     transition: opacity 500ms ease-in-out;
@@ -166,6 +134,14 @@ header .cta_button1::before {
 
 header .cta_button1:hover::before {
     opacity: 1;
+}
+
+header button:hover {
+    transform: scale(1.01);
+}
+
+header button:active {
+    transform: scale(0.99);
 }
 
 #hero {
@@ -212,10 +188,48 @@ header .cta_button1:hover::before {
         }
         
         button{
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            width: fit-content;
+            margin-top: 1%;
+            padding: min(1rem, 5%) min(4rem, 5%);
+            font-size: clamp(.5rem, 1.5vw + .8rem, 1.3rem);
+            color: var(--branco2);
+            background: linear-gradient(to right, var(--violeta), var(--lavana));
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
             opacity: 0;
             translate: 0 70px;
-            transition: 700ms;
-            transition-delay: 400ms;
+            transition: 500ms;
+            transition-delay: translate 400ms opacity 400ms;
+        }
+
+        button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to left, var(--violeta), var(--lavana));
+            border-radius: inherit;
+            opacity: 0;
+            transition: opacity 200ms ease-in-out;
+        }
+
+        button:hover::before {
+            opacity: 1;
+        }
+
+        button:hover {
+            transform: scale(1.01);
+        }
+
+        button:active {
+            transform: scale(0.99);
         }
 
     }
@@ -242,6 +256,7 @@ header .cta_button1:hover::before {
     translate: 0 0;
 }
 
+/* seção de benefícios */
 #beneficios {
     padding: 0 min(2rem, 10%);
 
@@ -254,7 +269,7 @@ header .cta_button1:hover::before {
     h1 {
         font-size: clamp(.75rem, 2vw + .5rem, 5rem);
         text-align: center;
-        color: var(--titulo-roxo);
+        color: var(--lavana);
         margin-bottom: 1.5rem;
         width: 65%;
         text-align: center;
@@ -277,7 +292,7 @@ header .cta_button1:hover::before {
             transition: 700ms;
 
             h3 {
-                color: var(--lavana);
+                color: var(--violeta);
                 font-size: clamp(1rem, 1vw + .8rem, 3rem);
             }
 
@@ -291,7 +306,7 @@ header .cta_button1:hover::before {
         }
 
         #box-1 {
-            background-color: var(--lavana);
+            background-color: var(--violeta);
             grid-area: box-1;
 
             display: flex;
@@ -336,21 +351,26 @@ header .cta_button1:hover::before {
 
             transition-delay: 600ms;
 
-            div {
+            div:nth-child(1) {
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
-                align-items: center;
 
                 h3 {
-                    text-align:start;
+                    text-align: start;
                 }
             }
 
-            img{
+            div:nth-child(2) {
                 display: flex;
+                flex-direction: column;
+                gap: .3rem;
                 align-content: center;
                 width: 80%;
+            }
+
+            div:nth-child(2) img {
+                width: 125%;
             }
         }
 
@@ -382,10 +402,11 @@ header .cta_button1:hover::before {
 
             h3 {
                 width: 60%;
+                color: var(--verde-escuro);
             }
 
             img {
-                width: 18%;
+                width: 28%;
             }
         }
     }
@@ -421,6 +442,7 @@ header .cta_button1:hover::before {
     translate: 0 0;
 }
 
+/* seção da plataforma */
 #plataforma{
     padding: 0 min(2rem, 10%);
     position: relative;
@@ -433,14 +455,14 @@ header .cta_button1:hover::before {
     h1{
         font-size: clamp(.75rem, 2vw + .5rem, 5rem);
         text-align: center;
-        color: var(--titulo-roxo);
+        color: var(--lavana);
         margin-bottom: .5rem;
     }
 
     h3{
         font-weight: 300;
         font-size: 1.5rem;
-        margin-bottom: 5vh;
+        margin-bottom: 3vh;
     }
 }
 
@@ -454,16 +476,18 @@ header .cta_button1:hover::before {
 
 .cards_plataforma{
     position: sticky;
-    top: 100px;
+    top: 50px;
     width: 80%;
     height: 60vh;
     color: white;
     border-radius: 30px;
-    background-color: var(--lavana);
+    background-color: var(--violeta);
+    padding-left: 2rem;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: start;
 
     will-change: transform;
 
@@ -471,10 +495,23 @@ header .cta_button1:hover::before {
     translate: 0 70px;
     transition: opacity 300ms, translate 300ms;
 
+    h3 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 3vh !important;
+        background-color: var(--limao-claro);
+        border-radius: 50px;
+        padding: 0 min(2rem, 20%);
+        color: var(--verde-escuro);
+        font-size: clamp(.5rem, 1vw + .5rem, 2rem) !important;
+    }
+
     span{
-        font-size: clamp(1rem, .8vw + 2.5rem, 2.5rem );
+        font-size: clamp(1rem, .8vw + 1.5rem, 2.5rem );
         font-weight: 600;
-        color: var(--branco2);
+        color: var(--verde-escuro);
     }
 
 }
@@ -486,7 +523,7 @@ header .cta_button1:hover::before {
 
 .cards_plataforma:nth-child(1) {
     top: 100px;
-    /* background-image: url("../assets/dashboard.jpg"); */
+    background-image: url("../assets/plataforma-assets/dashboard.jpg");
     background-position: 50% 30%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -494,7 +531,7 @@ header .cta_button1:hover::before {
 
 .cards_plataforma:nth-child(2) {
     top: 150px;
-    /* background-image: url("../assets/deposito.jpg"); */
+    background-image: url("../assets/plataforma-assets/deposito.jpg");
     background-position: 50% 30%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -502,7 +539,7 @@ header .cta_button1:hover::before {
 
 .cards_plataforma:nth-child(3) {
     top: 200px;
-    /* background-image: url("../assets/email-not.jpg");*/ 
+    background-image: url("../assets/plataforma-assets/pessoa-no-celular.jpg");
     background-position: 50% 30%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -510,7 +547,7 @@ header .cta_button1:hover::before {
 
 .cards_plataforma:nth-child(4) {
     top: 250px;
-    /* background-image: url("../assets/pessoa-no-celular.jpg"); */
+    background-image: url("../assets/plataforma-assets/email-not.jpg");
     background-position: 50% 25%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -518,7 +555,7 @@ header .cta_button1:hover::before {
 
 .cards_plataforma:nth-child(5) {
     top: 300px;
-    /* background-image: url("../assets/caixa-registradora.jpg"); */
+    background-image: url("../assets/plataforma-assets/caixa-registradora.jpg");
     background-position: 50% 45%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -588,7 +625,7 @@ header .cta_button1:hover::before {
 
         font-size: clamp(1rem, .8vw + .5rem, 3rem);
 
-        background-color: var(--lavana);
+        background-color: var(--violeta);
         color: var(--branco2);
 
         opacity: 0;
@@ -657,7 +694,7 @@ header .cta_button1:hover::before {
     }
 
     .card:nth-child(2) {
-        background-image: url('../assets/bruno.jpeg');
+        background-image: url('../assets/equipe-assets/bruno.jpeg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -665,7 +702,7 @@ header .cta_button1:hover::before {
     }
 
     .card:nth-child(3) {
-        background-image: url('../assets/enri.jpeg');
+        background-image: url('../assets/equipe-assets/henry.jpeg');
         background-position: 20% 50%;
         background-size: 200%;
         background-repeat: no-repeat;
@@ -673,7 +710,7 @@ header .cta_button1:hover::before {
     }
 
     .card:nth-child(4) {
-        background-image: url('../assets/nath.jpeg');
+        background-image: url('../assets/equipe-assets/nathalia.jpeg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -681,7 +718,7 @@ header .cta_button1:hover::before {
     }
 
     .card:nth-child(5) {
-        background-image: url('../assets/morais.jpeg');
+        background-image: url('../assets/equipe-assets/morais.jpeg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -689,49 +726,49 @@ header .cta_button1:hover::before {
     }
 
     .card:nth-child(6) {
-        background-image: url('../assets/hik.jpeg');
+        background-image: url('../assets/equipe-assets/hikaru.jpeg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .card:nth-child(7) {
-        background-image: url('../assets/bia.jpeg');
+        background-image: url('../assets/equipe-assets/beatriz.jpeg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .card:nth-child(8) {
-        background-image: url('../assets/chris.jpeg');
+        background-image: url('../assets/equipe-assets/enzo-chris.jpeg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .card:nth-child(9) {
-        background-image: url('../assets/bella.jpeg');
+        background-image: url('../assets/equipe-assets/isabella.jpeg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .card:nth-child(10) {
-        background-image: url('../assets/kluska.jpeg');
+        background-image: url('../assets/equipe-assets/kluska.jpeg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .card:nth-child(11) {
-        background-image: url('../assets/luigi.jpeg');
+        background-image: url('../assets/equipe-assets/luigi.jpeg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .card:nth-child(12) {
-        background-image: url('../assets/rodrigo.png');
+        background-image: url('../assets/equipe-assets/rodrigo.png');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -781,7 +818,7 @@ header .cta_button1:hover::before {
     h1{
         font-size: 3rem;
         margin-bottom: 1rem;
-        color: var(--titulo-roxo);
+        color: var(--verde-escuro);
     }
     h3{
         color: var(--petroleo);
@@ -793,6 +830,48 @@ header .cta_button1:hover::before {
     button{
         margin-top: 3rem;
     }
+}
+
+.cta_button {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: fit-content;
+    margin-top: 1%;
+    padding: min(1rem, 5%) min(4rem, 5%);
+    font-size: clamp(.5rem, 1.5vw + .8rem, 1.3rem);
+    color: var(--branco2);
+    background: linear-gradient(to right, var(--violeta), var(--lavana));
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+
+.cta_button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, var(--violeta), var(--lavana));
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+.cta_button:hover::before {
+    opacity: 1;
+}
+
+.cta_button:hover {
+    transform: scale(1.01);
+}
+
+.cta_button:active {
+    transform: scale(0.99);
 }
 
 footer{
@@ -820,7 +899,7 @@ footer{
     }
 
     label{
-        color: var(--lavana);
+        color: var(--violeta);
         font-size: clamp(1rem, 1vw + .5rem, 1.8rem);;
         font-weight: 500;
     }
