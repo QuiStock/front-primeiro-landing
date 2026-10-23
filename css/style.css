@@ -427,6 +427,7 @@ header .cta_button1:hover::before {
     translate: 0 0;
 }
 
+/* seção da plataforma */
 #plataforma{
     padding: 0 min(2rem, 10%);
     position: relative;
@@ -446,7 +447,7 @@ header .cta_button1:hover::before {
     h3{
         font-weight: 300;
         font-size: 1.5rem;
-        margin-bottom: 5vh;
+        margin-bottom: 3vh;
     }
 }
 
@@ -460,16 +461,18 @@ header .cta_button1:hover::before {
 
 .cards_plataforma{
     position: sticky;
-    top: 100px;
+    top: 50px;
     width: 80%;
     height: 60vh;
     color: white;
     border-radius: 30px;
     background-color: var(--violeta);
+    padding-left: 2rem;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: start;
 
     will-change: transform;
 
@@ -477,10 +480,23 @@ header .cta_button1:hover::before {
     translate: 0 70px;
     transition: opacity 300ms, translate 300ms;
 
+    h3 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 3vh !important;
+        background-color: var(--limao-claro);
+        border-radius: 50px;
+        padding: 0 min(2rem, 20%);
+        color: var(--verde-escuro);
+        font-size: clamp(.5rem, 1vw + .5rem, 2rem) !important;
+    }
+
     span{
-        font-size: clamp(1rem, .8vw + 2.5rem, 2.5rem );
+        font-size: clamp(1rem, .8vw + 1.5rem, 2.5rem );
         font-weight: 600;
-        color: var(--branco2);
+        color: var(--verde-escuro);
     }
 
 }
@@ -492,7 +508,7 @@ header .cta_button1:hover::before {
 
 .cards_plataforma:nth-child(1) {
     top: 100px;
-    /* background-image: url("../assets/dashboard.jpg"); */
+    background-image: url("../assets/plataforma-assets/dashboard.jpg");
     background-position: 50% 30%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -500,7 +516,7 @@ header .cta_button1:hover::before {
 
 .cards_plataforma:nth-child(2) {
     top: 150px;
-    /* background-image: url("../assets/deposito.jpg"); */
+    background-image: url("../assets/plataforma-assets/deposito.jpg");
     background-position: 50% 30%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -508,7 +524,7 @@ header .cta_button1:hover::before {
 
 .cards_plataforma:nth-child(3) {
     top: 200px;
-    /* background-image: url("../assets/email-not.jpg");*/ 
+    background-image: url("../assets/plataforma-assets/pessoa-no-celular.jpg");
     background-position: 50% 30%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -516,7 +532,7 @@ header .cta_button1:hover::before {
 
 .cards_plataforma:nth-child(4) {
     top: 250px;
-    /* background-image: url("../assets/pessoa-no-celular.jpg"); */
+    background-image: url("../assets/plataforma-assets/email-not.jpg");
     background-position: 50% 25%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -524,7 +540,7 @@ header .cta_button1:hover::before {
 
 .cards_plataforma:nth-child(5) {
     top: 300px;
-    /* background-image: url("../assets/caixa-registradora.jpg"); */
+    background-image: url("../assets/plataforma-assets/caixa-registradora.jpg");
     background-position: 50% 45%;
     background-repeat: no-repeat;
     background-size: cover;
