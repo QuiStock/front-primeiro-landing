@@ -70,3 +70,81 @@ button:hover {
 button:active {
     transform: scale(0.98);
 }
+
+/* Responsividade para telas menores que a tela web */
+@media (max-width: 1024px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+        min-height: 100dvh;
+        justify-content: center;
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    img {
+        position: static;
+        bottom: auto;
+        width: clamp(260px, 75vw, 650px);
+        max-width: 90%;
+        max-height: 45vh;
+        object-fit: contain;
+    }
+
+    body > p {
+        text-align: center;
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
+        max-width: 90%;
+    }
+
+    button {
+        width: clamp(140px, 25vw, 180px);
+        height: auto;
+        min-height: 48px;
+        padding: 0.7rem 1.5rem;
+        font-size: clamp(0.9rem, 2vw, 1.1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        gap: 1.5rem;
+    }
+
+    img {
+        width: 92%;
+    }
+
+    button {
+        width: clamp(140px, 45vw, 180px);
+        min-height: 46px;
+    }
+}
+
+@media (max-height: 520px) {
+    body {
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    img {
+        position: static;
+        bottom: auto;
+        max-height: 38vh;
+        width: auto;
+    }
+
+    body > p {
+        font-size: clamp(0.85rem, 4vh, 1.1rem);
+    }
+
+    button {
+        width: clamp(120px, 20vw, 160px);
+        height: auto;
+        min-height: 38px;
+        padding: 0.4rem 1.2rem;
+        font-size: clamp(0.85rem, 3.5vh, 1rem);
+    }
+}

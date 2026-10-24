@@ -109,3 +109,152 @@ button:hover {
 button:active {
     transform: scale(0.98);
 }
+
+/* Responsividade para telas menores que a tela web */
+@media (max-width: 1024px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+        min-height: 100dvh;
+        justify-content: center;
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    .container {
+        position: relative;
+        bottom: auto;
+        gap: clamp(1rem, 4vw, 3rem);
+        max-width: 100%;
+    }
+
+    .container > h1 {
+        font-size: clamp(4rem, 18vw, 9rem);
+        line-height: 1;
+    }
+
+    .container > div {
+        width: clamp(5.5rem, 22vw, 12rem);
+        height: clamp(5.5rem, 22vw, 12rem);
+        max-height: 40vh;
+        border-width: clamp(6px, 1.5vw, 12px);
+        gap: clamp(0.35rem, 1.5vw, 1rem);
+    }
+
+    .container > div .eye {
+        gap: clamp(0.75rem, 3.5vw, 2.5rem);
+    }
+
+    .container > div .eye h1 {
+        font-size: clamp(1.25rem, 4.5vw, 2.75rem);
+        line-height: 1;
+    }
+
+    .container > div p {
+        font-size: clamp(0.45rem, 1.2vw, 0.85rem);
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    body > p {
+        text-align: center;
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
+        max-width: 90%;
+    }
+
+    button {
+        width: clamp(140px, 25vw, 180px);
+        height: auto;
+        min-height: 48px;
+        padding: 0.7rem 1.5rem;
+        font-size: clamp(0.9rem, 2vw, 1.1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        gap: 1.5rem;
+    }
+
+    .container {
+        gap: clamp(0.5rem, 2.5vw, 1rem);
+    }
+
+    .container > h1 {
+        font-size: clamp(3.2rem, 20vw, 4.5rem);
+    }
+
+    .container > div {
+        width: clamp(4.5rem, 25vw, 6rem);
+        height: clamp(4.5rem, 25vw, 6rem);
+        border-width: 5px;
+        gap: 0.25rem;
+    }
+
+    .container > div .eye {
+        gap: clamp(0.5rem, 2vw, 1rem);
+    }
+
+    .container > div .eye h1 {
+        font-size: clamp(1rem, 4vw, 1.4rem);
+    }
+
+    .container > div p {
+        font-size: clamp(0.35rem, 1.4vw, 0.5rem);
+    }
+
+    button {
+        width: clamp(140px, 45vw, 180px);
+        min-height: 46px;
+    }
+}
+
+@media (max-height: 520px) {
+    body {
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .container {
+        position: relative;
+        bottom: auto;
+        gap: 1rem;
+    }
+
+    .container > h1 {
+        font-size: clamp(2.5rem, 18vh, 5rem);
+    }
+
+    .container > div {
+        width: clamp(3.2rem, 22vh, 6.5rem);
+        height: clamp(3.2rem, 22vh, 6.5rem);
+        border-width: 4px;
+        gap: 0.2rem;
+    }
+
+    .container > div .eye {
+        gap: 0.75rem;
+    }
+
+    .container > div .eye h1 {
+        font-size: clamp(0.85rem, 6vh, 1.5rem);
+    }
+
+    .container > div p {
+        font-size: clamp(0.32rem, 2.2vh, 0.55rem);
+    }
+
+    body > p {
+        font-size: clamp(0.85rem, 4vh, 1.1rem);
+    }
+
+    button {
+        width: clamp(120px, 20vw, 160px);
+        height: auto;
+        min-height: 38px;
+        padding: 0.4rem 1.2rem;
+        font-size: clamp(0.85rem, 3.5vh, 1rem);
+    }
+}
