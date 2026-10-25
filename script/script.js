@@ -50,6 +50,7 @@ observer.observe(contatoAll);
 
 // ===== PLATAFORMA (cards empilhados com efeito de cone) =====
 
+const platCard1 = document.querySelector(".cards_plataforma:nth-child(1)");
 const platCards = document.querySelectorAll(".cards_plataforma");
 const topOffsets = [100, 150, 200, 250, 300]; // precisa bater com o "top" de cada #c1..#c5 no CSS
 const shrinkStep = 0.03;   // quanto cada card empilhado acima encolhe os de baixo
@@ -67,9 +68,7 @@ const platObserver = new IntersectionObserver((entries) => {
     threshold: 0.1
 });
 
-platCards.forEach((card) => {
-    platObserver.observe(card);
-});
+platObserver.observe(platCard1)
 
 // posição "de parada" de cada card, calculada uma única vez (antes de qualquer scale ser aplicado)
 let stopPoints = [];
@@ -128,109 +127,3 @@ window.addEventListener("resize", () => {
     calculateStopPoints();
     updateCardsScale();
 });
-/*
-// scroll animations
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        } else {
-            entry.target.classList.remove("show");
-        }
-    });
-}, {
-    threshold: 0.8,
-    rootMargin: "30px"
-});
-
-const observer2 = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        } else {
-            entry.target.classList.remove("show");
-        }
-    });
-}, {
-    root: document.querySelector('.timeline-container'), // scroll container as root
-    threshold: 0.5,
-    rootMargin: "30px"
-});
-
-const headerLinks = document.querySelectorAll("header a");
-const avrilTxt = document.querySelector("#name span:nth-of-type(1)");
-const lavigneTxt = document.querySelector("#name span:nth-of-type(2)");
-const ppp = document.querySelector("#ppp");
-const paragraph = document.querySelector("#paragraph");
-const avrilHero = document.querySelector("#avril-hero");
-const splasHero = document.querySelector("#splash-hero");
-const storyTitle = document.querySelector("#story-title");
-const born = document.querySelector("#born");
-const family = document.querySelector("#family");
-const napanee = document.querySelector("#napanee");
-const school = document.querySelector("#school");
-const opportunity = document.querySelector("#opportunity");
-const achievementsTitle = document.querySelector("#achievements-title");
-const timelineItems = document.querySelectorAll(".timeline-track .info-container");
-const songCards = document.querySelectorAll(".carousel div");
-const songsTitle = document.querySelector("#songs > p");
-
-timelineItems.forEach((item) => {
-    observer2.observe(item);
-});
-
-headerLinks.forEach((card) => {
-    observer.observe(card);
-}); 
-
-observer.observe(avrilTxt);
-
-observer.observe(lavigneTxt);
-
-observer.observe(ppp);
-
-observer.observe(paragraph);
-
-observer.observe(avrilHero);
-
-observer.observe(splasHero);
-
-observer.observe(storyTitle);
-
-observer.observe(born);
-
-observer.observe(family);
-
-observer.observe(napanee);
-
-observer.observe(school);
-
-observer.observe(opportunity);
-
-observer.observe(achievementsTitle);
-
-songCards.forEach((card) => {
-    observer.observe(card);
-}); 
-
-observer.observe(songsTitle);
-
-const firstThreeItems = document.querySelectorAll(".timeline-track .info-container:nth-child(-n+3)");
-
-const observer3 = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        } else {
-            entry.target.classList.remove("show");
-        }
-    });
-}, {
-    threshold: 0.5
-    // no root specified = viewport, same as your `observer` for hero/story elements
-});
-
-firstThreeItems.forEach((item) => {
-        observer3.observe(item);
-}); 
-*/
