@@ -42,7 +42,7 @@ opcao2.addEventListener("click", function(){
 
         interacao.classList.add("fadeout");
 
-        fefoImagem.src = "assets/fefo-normal.png";
+        fefoImagem.src = "../assets/login-assets/fefo-normal.png";
         fefoImagem.classList.add("fefoSaindo");
 
     } else if(fala.textContent == "Gostaria de fazer um?"){
