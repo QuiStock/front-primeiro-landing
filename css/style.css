@@ -523,7 +523,7 @@ header button:active {
 
 .cards_plataforma:nth-child(1) {
     top: 100px;
-    background-image: url("../assets/plataforma-assets/dashboard.jpg");
+    background-image: url("../assets/plataforma-assets/1.jpg");
     background-position: 50% 30%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -531,7 +531,7 @@ header button:active {
 
 .cards_plataforma:nth-child(2) {
     top: 150px;
-    background-image: url("../assets/plataforma-assets/deposito.jpg");
+    background-image: url("../assets/plataforma-assets/2.jpg");
     background-position: 50% 30%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -539,7 +539,7 @@ header button:active {
 
 .cards_plataforma:nth-child(3) {
     top: 200px;
-    background-image: url("../assets/plataforma-assets/pessoa-no-celular.jpg");
+    background-image: url("../assets/plataforma-assets/3.jpg");
     background-position: 50% 30%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -547,7 +547,7 @@ header button:active {
 
 .cards_plataforma:nth-child(4) {
     top: 250px;
-    background-image: url("../assets/plataforma-assets/email-not.jpg");
+    background-image: url("../assets/plataforma-assets/4.jpg");
     background-position: 50% 25%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -555,7 +555,7 @@ header button:active {
 
 .cards_plataforma:nth-child(5) {
     top: 300px;
-    background-image: url("../assets/plataforma-assets/caixa-registradora.jpg");
+    background-image: url("../assets/plataforma-assets/Group\ 106\ -5.svg");
     background-position: 50% 45%;
     background-repeat: no-repeat;
     background-size: cover;
