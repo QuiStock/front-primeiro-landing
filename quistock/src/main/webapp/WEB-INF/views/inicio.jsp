@@ -21,14 +21,7 @@
     <%-- Menu lateral (copiado em cada página: aqui não existe include) --%>
     <aside>
         <img src="${ctx}/assets/logo-branca.png" alt="QuiStock" id="logo">
-        <nav class="links">
-            <a href="${ctx}/inicio" class="ativo"><img src="${ctx}/assets/icons/inicio.svg" alt="">Início</a>
-            <a href="${ctx}/admins"><img src="${ctx}/assets/icons/admin.svg" alt="">Admins</a>
-            <a href="${ctx}/gerentes"><img src="${ctx}/assets/icons/gerente.svg" alt="">Gerente</a>
-            <a href="${ctx}/faq"><img src="${ctx}/assets/icons/faq.svg" alt="">FAQ</a>
-            <a href="${ctx}/regioes"><img src="${ctx}/assets/icons/regiao.svg" alt="">Região</a>
-            <a href="${ctx}/anotacoes"><img src="${ctx}/assets/icons/anotacoes.svg" alt="">Anotações</a>
-        </nav>
+        <jsp:include page="/WEB-INF/views/menu.jsp"><jsp:param name="ativo" value="inicio"/></jsp:include>
     </aside>
 
     <main class="centralizado">
@@ -36,7 +29,6 @@
 
         <div id="acoes-inicio">
             <a class="botao verde" href="${ctx}/admins">Ver administradores</a>
-            <%-- "${ctx}/" é a raiz do sistema: lá abre o index da landing page --%>
             <a class="botao contorno" href="${ctx}/">Voltar para a landing</a>
         </div>
     </main>

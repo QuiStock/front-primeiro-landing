@@ -20,14 +20,7 @@
     <%-- Menu lateral (copiado em cada página: aqui não existe include) --%>
     <aside>
         <img src="${ctx}/assets/logo-branca.png" alt="QuiStock" id="logo">
-        <nav class="links">
-            <a href="${ctx}/inicio"><img src="${ctx}/assets/icons/inicio.svg" alt="">Início</a>
-            <a href="${ctx}/admins"><img src="${ctx}/assets/icons/admin.svg" alt="">Admins</a>
-            <a href="${ctx}/gerentes"><img src="${ctx}/assets/icons/gerente.svg" alt="">Gerente</a>
-            <a href="${ctx}/faq"><img src="${ctx}/assets/icons/faq.svg" alt="">FAQ</a>
-            <a href="${ctx}/regioes" class="ativo"><img src="${ctx}/assets/icons/regiao.svg" alt="">Região</a>
-            <a href="${ctx}/anotacoes"><img src="${ctx}/assets/icons/anotacoes.svg" alt="">Anotações</a>
-        </nav>
+        <jsp:include page="/WEB-INF/views/menu.jsp"><jsp:param name="ativo" value="regioes"/></jsp:include>
     </aside>
 
     <main>
@@ -65,17 +58,15 @@
                         <button type="button" class="botao" popovertarget="popup-adicionar"><img src="${ctx}/assets/icons/adicionar.svg" alt="">Adicionar</button>
                     </div>
 
-                    <div id="tabela" style="--colunas: 2">
+                    <div id="tabela" class="tabela-uma-coluna">
                         <div id="cabecalho">
                             <h3>Nome</h3>
-                            <h3>Email</h3>
                             <h3>Ações</h3>
                         </div>
 
                         <c:forEach var="item" items="${itens}">
                             <div class="linha">
                                 <span><c:out value="${item.nome}"/></span>
-                                <span><c:out value="${item.email}"/></span>
 
                                 <%-- Botões desta linha: abrem os popups "editar-ID" e "remover-ID" --%>
                                 <div class="acoes-linha">
@@ -103,11 +94,6 @@
                 <label for="add-nome">Nome</label>
                 <input id="add-nome" type="text" name="nome" maxlength="100" required autofocus>
             </div>
-            <div class="campo">
-                <label for="add-email">Email</label>
-                <input id="add-email" type="email" name="email" maxlength="150" required>
-            </div>
-
             <div class="acoes-popup">
                 <button type="button" class="botao" popovertarget="popup-adicionar" popovertargetaction="hide">Cancelar</button>
                 <button type="submit" class="botao primario">Salvar</button>
@@ -130,11 +116,6 @@
                     <label for="editar-${item.id}-nome">Nome</label>
                     <input id="editar-${item.id}-nome" type="text" name="nome" maxlength="100" required autofocus value="<c:out value='${item.nome}'/>">
                 </div>
-                <div class="campo">
-                    <label for="editar-${item.id}-email">Email</label>
-                    <input id="editar-${item.id}-email" type="email" name="email" maxlength="150" required value="<c:out value='${item.email}'/>">
-                </div>
-
                 <div class="acoes-popup">
                     <button type="button" class="botao" popovertarget="editar-${item.id}" popovertargetaction="hide">Cancelar</button>
                     <button type="submit" class="botao primario">Salvar</button>
