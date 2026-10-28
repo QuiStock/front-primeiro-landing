@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,12 +8,12 @@
     <link rel="stylesheet" href="../css/error500.css">
 </head>
 <body>
-    <img src="../assets/error-assets/500_dissolucao.svg" alt="505">
+<img src="../assets/error-assets/500_dissolucao.svg" alt="505">
 
-    <p id="mensagem"></p>
+<p id="mensagem"></p>
 
-    <button>Voltar</button>
+<button>Voltar</button>
 
-    <script src="../script/error404.js"></script>
+<script src="../script/error404.js"></script>
 </body>
 </html>
