@@ -247,6 +247,33 @@ main h1 {
     scrollbar-color: var(--violeta) transparent;
 }
 
+.tabela-uma-coluna { --colunas: 1; }
+.tabela-tres-colunas { --colunas: 3; }
+
+#tabela.tabela-consulta {
+    overflow-x: auto;
+}
+
+.tabela-consulta #cabecalho,
+.tabela-consulta .linha {
+    grid-template-columns: repeat(var(--colunas), minmax(0, 1fr));
+}
+
+.tabela-pedido { --colunas: 4; }
+.tabela-promocao { --colunas: 5; }
+
+.tabela-pedido #cabecalho,
+.tabela-pedido .linha { min-width: 640px; }
+
+.tabela-promocao #cabecalho,
+.tabela-promocao .linha { min-width: 760px; }
+
+.mensagem-vazia {
+    align-self: center;
+    margin-top: 24px;
+    color: var(--verde-texto);
+}
+
 #tabela::-webkit-scrollbar {
     width: 6px;
 }
@@ -403,7 +430,8 @@ main.centralizado {
 }
 
 .campo input,
-.campo textarea {
+.campo textarea,
+.campo select {
     padding: 10px 14px;
     border: 2px solid var(--branco);
     border-radius: 12px;
@@ -414,7 +442,8 @@ main.centralizado {
 }
 
 .campo input:focus,
-.campo textarea:focus {
+.campo textarea:focus,
+.campo select:focus {
     border-color: var(--violeta);
     outline: none;
 }

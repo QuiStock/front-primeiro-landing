@@ -20,14 +20,7 @@
     <%-- Menu lateral (copiado em cada página: aqui não existe include) --%>
     <aside>
         <img src="${ctx}/assets/logo-branca.png" alt="QuiStock" id="logo">
-        <nav class="links">
-            <a href="${ctx}/inicio"><img src="${ctx}/assets/icons/inicio.svg" alt="">Início</a>
-            <a href="${ctx}/admins"><img src="${ctx}/assets/icons/admin.svg" alt="">Admins</a>
-            <a href="${ctx}/gerentes" class="ativo"><img src="${ctx}/assets/icons/gerente.svg" alt="">Gerente</a>
-            <a href="${ctx}/faq"><img src="${ctx}/assets/icons/faq.svg" alt="">FAQ</a>
-            <a href="${ctx}/regioes"><img src="${ctx}/assets/icons/regiao.svg" alt="">Região</a>
-            <a href="${ctx}/anotacoes"><img src="${ctx}/assets/icons/anotacoes.svg" alt="">Anotações</a>
-        </nav>
+        <jsp:include page="/WEB-INF/views/menu.jsp"><jsp:param name="ativo" value="gerentes"/></jsp:include>
     </aside>
 
     <main>
@@ -65,7 +58,7 @@
                         <button type="button" class="botao" popovertarget="popup-adicionar"><img src="${ctx}/assets/icons/adicionar.svg" alt="">Adicionar</button>
                     </div>
 
-                    <div id="tabela" style="--colunas: 2">
+                    <div id="tabela">
                         <div id="cabecalho">
                             <h3>Nome</h3>
                             <h3>Email</h3>
