@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Admins</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/quistock.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/loading.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/loading.css?v=2">
 </head>
 <body>
 
@@ -25,6 +25,7 @@
 
 <main>
     <h1>Admins</h1>
+    <c:if test="${not empty erro}"><p class="alerta" id="erro" role="alert"><c:out value="${erro}"/></p></c:if>
     <c:choose>
         <c:when test="${empty admins}">
             <div id="vazio">
@@ -91,7 +92,6 @@
             }
         }
 
-        // fecha ao clicar fora (no fundo escuro)
         modal.addEventListener('click', function (e) {
             if (e.target === modal) modal.close();
         });
